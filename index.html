@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Space+Grotesk&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="blurred">
+    <header class="header">
+      <div class="header-date-month">
+        <span data-current-date>1</span>&nbsp;<span data-current-month>JANUARY</span>
+      </div>
+      <div class="header-city">
+        <span class="city" data-current-location>SARAJEVO</span>&nbsp;WEATHER
+      </div>
+    </header>
+
+    <main>
+      <div id="parent">
+        <div id="left-side">
+          <div class="search">
+              <input id="city-input" class="search-input" type="text" placeholder="ENTER CITY...">
+              <button id="search-btn" type="submit"><img src="icons/search-icon.svg"></button>
+          </div>
+        <div class="current-temp"><span data-current-temp>12</span>°</div>
+        <img class="current-weather-icon large" src="svg/Cloud.svg" data-current-icon>
+        <div class="current-weather"><span data-current-weather>Cloudy</span></div>
+        <div class="grid-weather">
+          <div class="grid-item">Wind</div>
+          <div class="grid-item">Precip</div>
+          <div class="grid-item">High</div>
+          <div class="grid-item">Low</div>
+        </div>
+        <div class="grid-stats">
+          <div class="grid-stat"><span data-current-wind>5</span>&nbsp;m/s</span></div>
+          <div class="grid-stat"><span data-current-rain>88</span>%</span></div>
+          <div class="grid-stat"><span data-current-high>13</span>°</span></div>
+          <div class="grid-stat"><span data-current-low>9</span>°</span></div>
+        </div>
+       </div>
+
+       <div id="right-side">
+         <table class="week-section">
+          <tbody data-week-section>
+            <tr class="day-row">
+              <td>
+                <div class="date">1 JAN</div>
+                <div class="day-of-week">Monday</div>
+              </td>
+              <td>
+                <img class="svg" src="svg/Thunder.svg">
+              </td>
+              <td>
+                <div class="avg-temp">10°</div>
+              </td>
+              <td>
+                <div class="low-temp">5°</div>
+              </td>
+              <td>
+                <div class="precip">90%</div>
+              </td>
+            </tr>
+            <tr class="day-row">
+              <td>
+                <div class="date">2 JAN</div>
+                <div class="day-of-week">Tuesday</div>
+              </td>
+              <td>
+                <img class="svg" src="svg/Cloud.svg">
+              </td>
+              <td>
+                <div class="avg-temp">15°</div>
+              </td>
+              <td>
+                <div class="low-temp">7°</div>
+              </td>
+              <td>
+                <div class="precip">40%</div>
+              </td>
+            </tr>
+            <tr class="day-row">
+              <td>
+                <div class="date">3 JAN</div>
+                <div class="day-of-week">Wednesday</div>
+              </td>
+              <td>
+                <img class="svg" src="svg/Cloud.svg">
+              </td>
+              <td>
+                <div class="avg-temp">10°</div>
+              </td>
+              <td>
+                <div class="low-temp">6°</div>
+              </td>
+              <td>
+                <div class="precip">10%</div>
+              </td>
+            </tr>
+            <tr class="day-row">
+              <td>
+                <div class="date">4 JAN</div>
+                <div class="day-of-week">Thursday</div>
+              </td>
+              <td>
+                <img class="svg" src="svg/Cloud_Sun.svg">
+              </td>
+              <td>
+                <div class="avg-temp">8°</div>
+              </td>
+              <td>
+                <div class="low-temp">4°</div>
+              </td>
+              <td>
+                <div class="precip">10%</div>
+              </td>
+            </tr>
+            <tr class="day-row">
+              <td>
+                <div class="date">5 JAN</div>
+                <div class="day-of-week">Friday</div>
+              </td>
+              <td>
+                <img class="svg" src="svg/Sun.svg">
+              </td>
+              <td>
+                <div class="avg-temp">12°</div>
+              </td>
+              <td>
+                <div class="low-temp">8°</div>
+              </td>
+              <td>
+                <div class="precip">0%</div>
+              </td>
+            </tr>
+            <tr class="day-row">
+              <td>
+                <div class="date">6 JAN</div>
+                <div class="day-of-week">Saturday</div>
+              </td>
+              <td>
+                <img class="svg" src="svg/Rain_Medium.svg">
+              </td>
+              <td>
+                <div class="avg-temp">12°</div>
+              </td>
+              <td>
+                <div class="low-temp">5°</div>
+              </td>
+              <td>
+                <div class="precip">60%</div>
+              </td>
+            </tr>
+            <tr class="day-row">
+              <td>
+                <div class="date">7 JAN</div>
+                <div class="day-of-week">Sunday</div>
+              </td>
+              <td>
+                <img class="svg" src="svg/Rain_Heavy.svg">
+              </td>
+              <td>
+                <div class="avg-temp">15°</div>
+              </td>
+              <td>
+                <div class="low-temp">9°</div>
+              </td>
+              <td>
+                <div class="precip">80%</div>
+              </td>
+            </tr>
+          </tbody>
+         </table>
+       </div>
+      </div>
+    </main>
+
+    <div class="footer-basic">
+      <footer>
+          <div class="social">
+            <a href="https://github.com/kris7ina" target="_blank"><img class="icon" src="icons/iconmonstr-github-1.svg"></a>
+            <a href="https://www.behance.net/frenchdogblues" target="_blank"><img class="icon" src="icons/iconmonstr-behance-4.svg"></a>
+            <a href="mailto:kristinarulina@gmail.com"><img class="icon" src="icons/iconmonstr-email-10.svg"></a>
+          </div>
+          <p class="copyright">Made (with love) by Kristina Rulina © 2023</p>
+      </footer>
+  </div>
+
+  <template id="daily-template">
+    <tr class="day-row">
+      <td>
+        <div class="date"><span data-date></span>&nbsp;<span data-month></span></div>
+        <div class="day-of-week" data-day></div>
+      </td>
+      <td>
+        <img class="svg" data-icon>
+      </td>
+      <td>
+        <div class="avg-temp"><span data-avg-temp></span>°</div>
+      </td>
+      <td>
+        <div class="low-temp"><span data-low-temp></span>°</div>
+      </td>
+      <td>
+        <div class="precip"><span data-precip></span>%</div>
+      </td>
+    </tr>
+  </template>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
