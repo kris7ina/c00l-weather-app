@@ -275,6 +275,7 @@ tr:not(:first-child) {
   color: #808088;
   text-align: left;
   padding-bottom: 0.5vw;
+  text-transform: uppercase;
 }
 
 .day-of-week {
