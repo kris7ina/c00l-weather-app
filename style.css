@@ -20,7 +20,6 @@ body {
 html {
   background: linear-gradient(270deg, #def1ff, #a8dcff, #c7d5ff, #e5edff);
   background-size: 800% 800%;
-
   -webkit-animation: background-gr 34s ease infinite;
   -moz-animation: background-gr 34s ease infinite;
   animation: background-gr 34s ease infinite;
@@ -43,10 +42,6 @@ html {
 } 
 
 /* HEADER */
-.header, .date {
-  text-transform: uppercase;
-}
-
 @keyframes slide-in {
   from {
     transform: translateX(-100%);
@@ -74,20 +69,21 @@ html {
   }
 }
 
-.header-date-month {
-  font-size: 7.5vw;
+.header-date-month, .header-city {
   display: flex;
-  justify-content: flex-start;
+  text-transform: uppercase;
+  font-size: 7.5vw;
   border-bottom: 0.36vw solid #202020;
+}
+
+.header-date-month {
+  justify-content: flex-start;
   animation: slide-in 1.5s ease-out;
 }
 
 .header-city {
-  font-size: 7.5vw;
-  display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  border-bottom: 0.36vw solid #202020;
   animation: slide-in-from-right 1.5s ease-in-out;
 }
 
@@ -97,13 +93,20 @@ html {
 
 /* BODY */
 #parent {
-  display: flex;
   justify-content: space-between;
 }
 
 #left-side, #right-side {
   margin-top: 3vw;
   animation: slide-up 1.5s ease-out;
+}
+
+#parent, button, .search, tr, .svg, .current-temp {
+  display: flex;
+}
+
+.current-weather, .grid-weather, .date, .day-of-week, .footer-basic {
+  font-family: 'Inter';
 }
 
 /* LEFT SIDE */
@@ -114,14 +117,19 @@ html {
 }
 
 /* SEARCH BAR */
-.search {
-  width: 20vw;
-  display: flex;
+.search, button, .search-input {
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+.search, button {
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+}
+
+.search {
+  width: 20vw;
   border: 0.1vw solid #202020;
-  border-radius: 50px;
 }
 
 button {
@@ -129,11 +137,7 @@ button {
   height: 3.5vw;
   padding-right: 1.8vw;
   cursor: pointer;
-  background-color: transparent;
   border-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 button > img {
@@ -151,9 +155,7 @@ button:hover {
   padding: 0 2vw;
   font-size: 1.7vw;
   line-height: 3vw;
-  border-radius: 50px;
   border: 0.08vw solid transparent;
-  background-color: transparent;
   transition: all 0.3s ease-in-out;
 }
 
@@ -163,10 +165,7 @@ button:hover {
   color: #808088;
 }
 
-.search:hover,
-.search:focus-within,
-.search-input:hover,
-.search-input:focus {
+.search:hover, .search:focus-within, .search-input:hover, .search-input:focus {
   transform: scale(1.1);
   transform-origin: top left;
   transition: transform 0.5s ease-in-out;
@@ -175,13 +174,11 @@ button:hover {
   border-radius: 0;
 }
 
-.search:hover,
-.search:focus-within {
+.search:hover, .search:focus-within {
   border-bottom: 0.1vw solid #202020;
 }
 
-.search-input:hover,
-.search-input:focus {
+.search-input:hover, .search-input:focus {
   padding-left: 0.05vw;
 }
 
@@ -190,7 +187,6 @@ button:hover {
   font-size: 21vw;
   height: 80%;
   width: 94%;
-  display: flex;
   text-align: right;
   align-items: flex-end;
   justify-content: flex-end;
@@ -200,28 +196,27 @@ img {
   filter: contrast(150);
 }
 
+.current-weather-icon.large, .current-weather, .grid-weather, .grid-stats {
+  position: absolute;
+}
+
 .current-weather-icon.large {
   width: 6vw;
-  position: absolute;
   bottom: 4vw;
 }
 
 .current-weather {
-  font-family: 'Inter';
   font-size: 2.5vw;
   width: 30%;
-  position: absolute;
   bottom: 0;
 }
 
 /* CURRENT WEATHER GRID */
 .grid-weather {
-  font-family: 'Inter';
   font-size: 1.7vw;
   columns: 2;
   text-align: left;
   width: 75%;
-  position: absolute;
   bottom: 0;
   left: 14.5vw;
 }
@@ -231,12 +226,10 @@ img {
 }
 
 .grid-stats {
-  font-family: 'Space Grotesk';
   font-size: 2.2vw;
   columns: 2;
   text-align: center;
   width: 63%;
-  position: absolute;
   bottom: -0.4%;
   left: 17.7vw;
 }
@@ -253,6 +246,9 @@ img {
 tr {
   border-bottom: 0.08vw solid #B1B1B1;
   transition: all .2s ease-in-out;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 0.8vw;
 }
 
 tr:hover {
@@ -268,22 +264,13 @@ tr:not(:first-child) {
   width: 95%;
 }
 
-.day-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding-bottom: 0.8vw;
-}
-
 .svg {
   width: max(2.5vw, 15px);
   height: max(2.5vw, 15px);
   padding: 0 3.3vw;
-  display: flex;
 }
 
 .date {
-  font-family: 'Inter';
   font-size: max(1.2vw, 8px);
   color: #808088;
   text-align: left;
@@ -292,7 +279,6 @@ tr:not(:first-child) {
 
 .day-of-week {
   width: 11vw;
-  font-family: 'Inter';
   font-size: max(1.7vw, 11px);
   line-height: 2vw;
 }
@@ -300,7 +286,7 @@ tr:not(:first-child) {
 .avg-temp {
   width: 7vw;
   text-align: center;
-  font-size: max(3.9vw, 18px);
+  font-size: max(3.9vw, 19px);
   line-height: 3.4vw;
 }
 
@@ -330,7 +316,6 @@ tr:not(:first-child) {
 }
 
 .footer-basic {
-  font-family: 'Inter';
   padding-top: 7vw;
   opacity: 0;
   animation: fade-in 8s;
@@ -342,12 +327,12 @@ tr:not(:first-child) {
   padding-bottom: 3vw;
 }
 
-.icon {
+.social-icon {
   width: 3vw;
 }
 
 .social > a {
-  margin: 2vw 1.5vw 0 1.5vw;
+  margin: 1.5vw 1.5vw;
   opacity: 70%;
 }
 
@@ -379,12 +364,11 @@ tr:not(:first-child) {
     display: block;
   }
 
-  #right-side {
+  #right-side, #left-side, .search-input, .week-section {
     width: 100%;
   }
 
   #left-side {
-    width: 100%;
     height: 55vh;
     padding-top: 10px;
     border-bottom: 0.8vw solid #202020;
@@ -407,54 +391,49 @@ tr:not(:first-child) {
     transition: none;
   }
 
-  .search-input {
-    width: 100%;
-    padding-left: 10px;
-    transition: none;
+  .search-input, .search-input::placeholder, .search-input:focus, .search-input:hover, .date {
     font-size: 10px;
-    line-height: 15px;
+  }
+
+  .search-input, .search:hover,
+  .search:focus-within, .search-input:hover, .search-input:focus {
     border-radius: 50px;
-    transition: none;
-  }
-  
-  .search-input::placeholder {
-    font-size: 10px;
-  }
-  
-  .search:hover,
-  .search:focus-within {
     transition: none;
     transform: none;
+  }
+
+  .search-input {
+    line-height: 15px;
+  }
+  
+  .search:hover, .search:focus-within {
     outline: 0;
-    border-radius: 50px;
     border: 1px solid black;
   }
   
-  .search-input:hover,
-  .search-input:focus {
-    transition: none;
-    transform: none;
+  .search-input, .search-input:hover, .search-input:focus {
     padding-left: 10px;
-    border-radius: 50px;
-    font-size: 10px;
   }
 
   .grid-stats, .grid-weather, .current-weather {
     padding-bottom: 5vw;
   }
 
+  .grid-stats, .current-temp {
+    position: absolute;
+  }
+
   .grid-stats {
     font-size: 15px;
-    position: absolute;
     left: 37%;
     text-align: right;
   }
 
   .grid-weather {
     font-size: 12px;
-    position: absolute;
-    left: 40%;
-    margin-bottom: 0.2%;
+    width: 70%;
+    left: 28%;
+    text-align: center;
   }
 
   .current-weather-icon.large {
@@ -469,19 +448,13 @@ tr:not(:first-child) {
   .current-temp {
     font-size: 40vw;
     padding: 0;
-    position: absolute;
     right: 0;
     bottom: 0;
     padding-bottom: 50px;
   }
 
   .week-section {
-    width: 100%;
     margin: 0;
-  }
-
-  .date {
-    font-size: 10px;
   }
 
   .day-of-week {
@@ -512,7 +485,7 @@ tr:not(:first-child) {
     border-bottom: 1px solid #B1B1B1;
   }
 
-  .icon {
+  .social-icon {
     width: 17px;
     padding-top: 10px;
   }
