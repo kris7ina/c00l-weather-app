@@ -5,7 +5,7 @@
 
 ## preview
 
-<img src="https://user-images.githubusercontent.com/124094022/223474226-2fd5f11c-ced8-471f-8830-9735561436da.gif" width="50%">
+<img src="https://user-images.githubusercontent.com/124094022/223474226-2fd5f11c-ced8-471f-8830-9735561436da.gif" width="60%">
 
 ## info
 
